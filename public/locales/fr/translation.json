@@ -1,0 +1,273 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "history": "Historique",
+    "diagnostics": "Diagnostic",
+    "settings": "Paramètres"
+  },
+  "topAppBar": {
+    "importExport": "Importer/Exporter",
+    "about": "À Propos"
+  },
+  "dashboard": {
+    "noGlobalMeter": "Aucun compteur général configuré.",
+    "configureGlobalMeter": "Configurer le Compteur Général",
+    "subMeters": "Sous-compteurs",
+    "active": "{{count}} actif",
+    "active_plural": "{{count}} actifs",
+    "all": "Tous",
+    "addSubMeter": "Ajouter un sous-compteur",
+    "lossesAndCommon": "Pertes & Communs",
+    "compliant": "Conforme"
+  },
+  "meterCard": {
+    "balanceOK": "Solde OK",
+    "lowThreshold": "Seuil bas",
+    "inDeficit": "Déficitaire",
+    "record": "Saisie",
+    "recharge": "Créditer",
+    "general": "Général",
+    "globalMeter": "Compteur Général",
+    "cumulativeIndex": "Index Cumulé",
+    "monthConsumption": "Consommation du Mois",
+    "activePower": "Puissance Active",
+    "balance": "Solde",
+    "globalReserve": "Réserve Globale",
+    "totalReading": "Index actuel"
+  },
+  "meter": {
+    "globalDefaultName": "Compteur Global",
+    "subMeterDefaultName": "Sous-compteur"
+  },
+  "history": {
+    "title": "Historique de {{meterName}}",
+    "allEvents": "Historique global",
+    "noEvents": "Aucun événement pour ce compteur.",
+    "readingLabel": "Relevé",
+    "topupLabel": "Recharge",
+    "reconciliationLabel": "Réconciliation",
+    "readingDeleted": "Relevé supprimé.",
+    "topupDeleted": "Recharge supprimée.",
+    "confirmDeleteLast": "Voulez-vous vraiment annuler cette dernière opération ?",
+    "ofMeter": "de {{meter}}",
+    "unknown": "Inconnu",
+    "filter": {
+      "all": "Filtrer par compteur..."
+    },
+    "chart": {
+        "balance": "Évolution du solde"
+    },
+    "prediction": {
+        "dailyAvg": "Conso. journalière moy.",
+        "estimatedRemaining": "Autonomie restante estimée"
+    }
+  },
+  "diagnostics": {
+    "loading": "Analyse du réseau...",
+    "activeDiagnostic": "DIAGNOSTIC ACTIF",
+    "globalConsumption": "Consommation Globale (Maître) :",
+    "subMetersConsumption": "Σ Consommation Sous-compteurs :",
+    "lossesAndCommon": "Pertes / Espaces Communs :",
+    "visualDistribution": "Distribution visuelle (% de la conso. globale)",
+    "subMeters": "Sous-compteurs ({{percentage}}%)",
+    "losses": "Pertes ({{percentage}}%)",
+    "comingSoon": "Cette page sera améliorée avec des graphiques et un historique des diagnostics.",
+    "status": {
+        "criticalError": "Erreur Critique de Comptage",
+        "leakOrFraud": "Alerte Fuite/Fraude",
+        "highLosses": "Pertes Élevées / Communs",
+        "balanced": "Réseau Équilibré"
+    },
+    "financialBalance": "BILAN FINANCIER GLOBAL",
+    "totalConsumed": "Total Consommé par les locataires :",
+    "totalPaid": "Total Payé par les locataires :",
+    "tenantDebt": "Dette cumulée des locataires :",
+    "tenantAdvance": "Avance cumulée des locataires :",
+    "paid": "Payé",
+    "consumed": "Consommé",
+    "chart": {
+        "consumed": "Consommation cumulée",
+        "paid": "Paiements cumulés"
+    },
+    "financialHistory": "Historique Financier (90 derniers jours)"
+  },
+  "financialStatus": {
+      "significantDebt": "Dette Importante",
+      "slightDebt": "Dette Légère",
+      "inAdvance": "En Avance",
+      "balanced": "Équilibré"
+  },
+  "settings": {
+    "language": {
+      "title": "Langue"
+    },
+    "displayMode": "Mode d'Affichage",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système",
+    "accentTheme": {
+      "title": "Thème d'Accentuation"
+    },
+    "dialStyle": "Style des Cadrans",
+    "dialStyles": {
+      "realistic": "3D Réaliste",
+      "flat": "Moderne Plat"
+    },
+    "font": "Police d'Affichage",
+    "fonts": {
+      "digital": "Numérique",
+      "mono": "Mono",
+      "sans": "Sans"
+    },
+    "preview": {
+      "title": "Aperçu",
+      "label": "Aperçu Compteur",
+      "tenantName": "Locataire Exemple"
+    }
+  },
+  "addMeterModal": {
+    "title": {
+      "global": "Configurer le Compteur Général",
+      "sub": "Ajouter un Sous-Compteur"
+    },
+    "label": {
+      "nameOptional": "Libellé / Nom (Optionnel)",
+      "moduleNumber": "N° de Module physique",
+      "currentIndex": "Index Actuel de Consommation",
+      "paidIndex": "Index Pré-Payé par le Locataire",
+      "initialReserve": "Réserve d'Unités Initiale (kWh)"
+    },
+    "save": "Enregistrer",
+    "error": {
+      "moduleNumberExists": "Ce numéro de module existe déjà.",
+      "indexNegative": "Les index ne peuvent être négatifs.",
+      "paidIndexLower": "L'index payé doit être supérieur ou égal à l'index actuel.",
+      "reserveNegative": "La réserve initiale ne peut être négative.",
+      "creationError": "Erreur lors de la création du compteur."
+    }
+  },
+  "confirmModal": {
+    "instruction": "Pour confirmer, veuillez taper \"{{confirmWord}}\" ci-dessous."
+  },
+  "undoToast": {
+    "cancel": "Annuler"
+  },
+  "themes": {
+    "industrial": "Industriel",
+    "neon": "Néon",
+    "retro": "Rétro",
+    "lab": "Labo",
+    "contrast": "Contraste Élevé"
+  },
+  "subPage": {
+    "history": "Historique du Compteur",
+    "meterSettings": "Paramètres du Compteur",
+    "newReading": "Nouveau Relevé",
+    "rechargeCredit": "Créditer le Compteur",
+    "notifications": "Notifications",
+    "dataManagement": "Importer / Exporter",
+    "about": "À Propos"
+  },
+  "rechargePage": {
+    "loading": "Chargement...",
+    "errorGeneric": "Une erreur est survenue.",
+    "titleGlobal": "Créditer la Réserve Principale",
+    "titleSubMeter": "Allouer du Crédit",
+    "currentReserve": "Réserve Actuelle",
+    "currentBalance": "Solde Actuel",
+    "buttonGlobal": "Créditer la Réserve",
+    "buttonSubMeter": "Allouer le Crédit",
+    "globalToastSuccess": "Réserve créditée de {{amount}} {{unit}}",
+    "subMeterToastSuccess": "{{amount}} {{unit}} alloués",
+    "undoToast": "Opération annulée."
+  },
+  "manufacturerBadge": {
+    "author": "Ir Adonis Rwabira",
+    "location": "Fièrement conçu à Goma, RDC",
+    "copyright": "© {{year}} Ir Adonis Rwabira. Tous droits réservés."
+  },
+  "aboutPage": {
+    "title": "À Propos de Meter Master Pro",
+    "version": "Version 1.0.0",
+    "copyright": "© {{year}} Ir Adonis Rwabira. Tous droits réservés.",
+    "author": "Conçu et développé par Ir Adonis Rwabira",
+    "contact": "Contact",
+    "description": "Meter Master Pro est une Progressive Web App (PWA) conçue pour la gestion divisionnaire d'énergie et la détection de pertes. Elle fonctionne 100% hors-ligne et garantit la confidentialité de vos données."
+  },
+  "units": {
+    "kw": "kW",
+    "kwh": "kWh",
+    "infinite": "∞",
+    "days": "jours"
+  },
+  "readingPage": {
+    "loading": "Chargement...",
+    "currentIndex": "Index Actuel",
+    "currentReserve": "Réserve Actuelle",
+    "balance": "Solde",
+    "newBalance": "Nouveau Solde",
+    "newReserve": "Nouvelle Réserve",
+    "actualReserveUnit": "kWh",
+    "lastReading": "Dernier relevé : {{value}} {{unit}}",
+    "consumption": "Consommation",
+    "unaccountedConsumption": "Non-imputée",
+    "submitButton": "VALIDER L'INDEX",
+    "reconcileButton": "RÉCONCILIER LA RÉSERVE",
+    "globalMeterNotice": "Attention : Ne mettez à jour cette valeur qu'après avoir effectué les relevés de tous les sous-compteurs pour la période. Cela permet de calculer avec précision la consommation des parties communes ou les pertes.",
+    "error": {
+      "invalidValue": "Le nouvel index ne peut être inférieur au précédent.",
+      "generic": "Une erreur inattendue est survenue."
+    }
+  },
+  "dataManagementPage": {
+    "exportTitle": "Exporter mes données",
+    "exportDescription": "Créez une sauvegarde complète de tous vos compteurs et relevés dans un fichier JSON. Conservez ce fichier en sécurité.",
+    "exportButton": "Télécharger la sauvegarde",
+    "importButton": "Importer une sauvegarde",
+    "importTitle": "Importer une sauvegarde",
+    "importDescription": "Restaurez vos données depuis un fichier de sauvegarde JSON. Attention, cela remplacera les données actuelles.",
+    "importingButton": "Importation...",
+    "dangerZoneTitle": "Zone de Danger",
+    "dangerZoneDescription": "La réinitialisation d'usine effacera toutes les données de l'application pour repartir de zéro. Cette action est finale et irréversible.",
+    "factoryResetButton": "Réinitialisation d'Usine",
+    "resetModalTitle": "Réinitialisation d'Usine",
+    "resetModalMessage": "Toutes vos données (compteurs, relevés, recharges) seront définitivement effacées. Cette action est irréversible.",
+    "resetModalConfirmButton": "Confirmer et tout effacer",
+    "toast": {
+      "exportSuccess": "Exportation réussie !",
+      "exportError": "Erreur lors de l'exportation des données.",
+      "importSuccess": "Importation réussie !",
+      "importError": "Erreur d'importation: {{error}}",
+      "invalidFile": "Format de fichier invalide.",
+      "resetSuccess": "Application réinitialisée. Rechargement en cours...",
+      "resetError": "Erreur lors de la réinitialisation."
+    }
+  },
+  "meterSettingsPage": {
+    "loading": "Chargement...",
+    "pageTitle": "Détails du Compteur",
+    "meterLabel": "Libellé du compteur",
+    "tenantNameLabel": "Nom du locataire (optionnel)",
+    "moduleNumberLabel": "N° de module (identifiant)",
+    "saveButton": "Enregistrer",
+    "dangerZoneTitle": "Zone de Danger",
+    "dangerZoneDescription": "La suppression d'un compteur est une action irréversible. Toutes les données de relevés et de recharges associées seront définitivement perdues.",
+    "deleteButton": "Supprimer",
+    "deleteModal": {
+      "title": "Supprimer \"{{meterName}}\" ?",
+      "message": "Cette action est irréversible. Toutes les données associées (relevés, recharges) seront définitivement perdues.",
+      "confirmButton": "Confirmer la suppression",
+      "confirmWord": "SUPPRIMER"
+    },
+    "toast": {
+      "updateSuccess": "Les informations du compteur ont été mises à jour.",
+      "updateError": "Impossible de mettre à jour le compteur.",
+      "deleteSuccess": "Le compteur et toutes ses données ont été supprimés.",
+      "deleteError": "Impossible de supprimer le compteur."
+    }
+  },
+  "notificationsPage": {
+    "title": "Centre de Notifications",
+    "noNotifications": "Aucune nouvelle notification pour le moment. Les alertes de solde bas ou critiques apparaîtront ici automatiquement."
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "navigation": {
+    "home": "Home",
+    "history": "History",
+    "diagnostics": "Diagnostics",
+    "settings": "Settings"
+  },
+  "topAppBar": {
+    "importExport": "Import/Export",
+    "about": "About"
+  },
+  "dashboard": {
+    "noGlobalMeter": "No global meter configured.",
+    "configureGlobalMeter": "Set Up Global Meter",
+    "subMeters": "Sub-Meters",
+    "active": "{{count}} active",
+    "active_plural": "{{count}} active",
+    "all": "All",
+    "addSubMeter": "Add Sub-Meter",
+    "lossesAndCommon": "Losses & Common Areas",
+    "compliant": "Compliant"
+  },
+  "meterCard": {
+    "balanceOK": "Balance OK",
+    "lowThreshold": "Low Threshold",
+    "inDeficit": "In Deficit",
+    "record": "Record",
+    "recharge": "Credit",
+    "general": "General",
+    "globalMeter": "Global Meter",
+    "cumulativeIndex": "Cumulative Index",
+    "monthConsumption": "Month's Consumption",
+    "activePower": "Active Power",
+    "balance": "Balance",
+    "globalReserve": "Global Reserve",
+    "totalReading": "Current Index"
+  },
+  "meter": {
+    "globalDefaultName": "Global Meter",
+    "subMeterDefaultName": "Sub-Meter"
+  },
+  "history": {
+    "title": "{{meterName}}'s History",
+    "allEvents": "Global History",
+    "noEvents": "No events for this meter yet.",
+    "readingLabel": "Reading",
+    "topupLabel": "Top-up",
+    "reconciliationLabel": "Reconciliation",
+    "readingDeleted": "Reading deleted.",
+    "topupDeleted": "Top-up deleted.",
+    "confirmDeleteLast": "Are you sure you want to undo this last operation?",
+    "ofMeter": "of {{meter}}",
+    "unknown": "Unknown",
+    "filter": {
+      "all": "Filter by meter..."
+    },
+    "chart": {
+        "balance": "Balance Evolution"
+    },
+    "prediction": {
+        "dailyAvg": "Avg. Daily Consumption",
+        "estimatedRemaining": "Estimated Remaining Time"
+    }
+  },
+  "diagnostics": {
+    "loading": "Analyzing network...",
+    "activeDiagnostic": "ACTIVE DIAGNOSTIC",
+    "globalConsumption": "Global Consumption (Master):",
+    "subMetersConsumption": "Σ Sub-Meters Consumption:",
+    "lossesAndCommon": "Losses / Common Areas:",
+    "visualDistribution": "Visual Distribution (% of global cons.)",
+    "subMeters": "Sub-Meters ({{percentage}}%)",
+    "losses": "Losses ({{percentage}}%)",
+    "comingSoon": "This page will be enhanced with charts and diagnostic history.",
+    "status": {
+        "criticalError": "Critical Metering Error",
+        "leakOrFraud": "Leak/Fraud Alert",
+        "highLosses": "High Losses / Common Areas",
+        "balanced": "Balanced Network"
+    },
+    "financialBalance": "OVERALL FINANCIAL BALANCE",
+    "totalConsumed": "Total Consumed by Tenants:",
+    "totalPaid": "Total Paid by Tenants:",
+    "tenantDebt": "Cumulative Tenant Debt:",
+    "tenantAdvance": "Cumulative Tenant Advance:",
+    "paid": "Paid",
+    "consumed": "Consumed",
+    "chart": {
+        "consumed": "Cumulative Consumption",
+        "paid": "Cumulative Payments"
+    },
+    "financialHistory": "Financial History (last 90 days)"
+  },
+  "financialStatus": {
+      "significantDebt": "Significant Debt",
+      "slightDebt": "Slight Debt",
+      "inAdvance": "In Advance",
+      "balanced": "Balanced"
+  },
+  "settings": {
+    "language": {
+      "title": "Language"
+    },
+    "displayMode": "Display Mode",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "accentTheme": {
+      "title": "Accent Theme"
+    },
+    "dialStyle": "Dial Style",
+    "dialStyles": {
+      "realistic": "3D Realistic",
+      "flat": "Modern Flat"
+    },
+    "font": "Display Font",
+    "fonts": {
+      "digital": "Digital",
+      "mono": "Mono",
+      "sans": "Sans"
+    },
+    "preview": {
+      "title": "Preview",
+      "label": "Meter Preview",
+      "tenantName": "Sample Tenant"
+    }
+  },
+  "addMeterModal": {
+    "title": {
+      "global": "Set Up Global Meter",
+      "sub": "Add Sub-Meter"
+    },
+    "label": {
+      "nameOptional": "Label / Name (Optional)",
+      "moduleNumber": "Physical Module #",
+      "currentIndex": "Current Consumption Index",
+      "paidIndex": "Pre-Paid Index by Tenant",
+      "initialReserve": "Initial Unit Reserve (kWh)"
+    },
+    "save": "Save",
+    "error": {
+      "moduleNumberExists": "This module number already exists.",
+      "indexNegative": "Indexes cannot be negative.",
+      "paidIndexLower": "Paid index must be greater than or equal to current index.",
+      "reserveNegative": "Initial reserve cannot be negative.",
+      "creationError": "Error creating meter."
+    }
+  },
+  "confirmModal": {
+    "instruction": "To confirm, please type \"{{confirmWord}}\" below."
+  },
+  "undoToast": {
+    "cancel": "Undo"
+  },
+  "themes": {
+    "industrial": "Industrial",
+    "neon": "Neon",
+    "retro": "Retro",
+    "lab": "Lab",
+    "contrast": "High Contrast"
+  },
+  "subPage": {
+    "history": "Meter History",
+    "meterSettings": "Meter Settings",
+    "newReading": "New Reading",
+    "rechargeCredit": "Recharge Meter",
+    "notifications": "Notifications",
+    "dataManagement": "Import / Export",
+    "about": "About"
+  },
+  "rechargePage": {
+    "loading": "Loading...",
+    "errorGeneric": "An error occurred.",
+    "titleGlobal": "Credit Main Reserve",
+    "titleSubMeter": "Allocate Credit",
+    "currentReserve": "Current Reserve",
+    "currentBalance": "Current Balance",
+    "buttonGlobal": "Credit Reserve",
+    "buttonSubMeter": "Allocate Credit",
+    "globalToastSuccess": "Reserve credited with {{amount}} {{unit}}",
+    "subMeterToastSuccess": "{{amount}} {{unit}} allocated",
+    "undoToast": "Operation cancelled."
+  },
+  "manufacturerBadge": {
+    "author": "Ir Adonis Rwabira",
+    "location": "Proudly designed in Goma, DRC",
+    "copyright": "© {{year}} Ir Adonis Rwabira. All rights reserved."
+  },
+  "aboutPage": {
+    "title": "About Meter Master Pro",
+    "version": "Version 1.0.0",
+    "copyright": "© {{year}} Ir Adonis Rwabira. All rights reserved.",
+    "author": "Designed and developed by Ir Adonis Rwabira",
+    "contact": "Contact",
+    "description": "Meter Master Pro is a Progressive Web App (PWA) designed for divisional energy management and loss detection. It works 100% offline and ensures the privacy of your data."
+  },
+  "units": {
+    "kw": "kW",
+    "kwh": "kWh",
+    "infinite": "∞",
+    "days": "days"
+  },
+  "readingPage": {
+    "loading": "Loading...",
+    "currentIndex": "Current Index",
+    "currentReserve": "Current Reserve",
+    "balance": "Balance",
+    "newBalance": "New Balance",
+    "newReserve": "New Reserve",
+    "actualReserveUnit": "kWh",
+    "lastReading": "Last reading: {{value}} {{unit}}",
+    "consumption": "Consumption",
+    "unaccountedConsumption": "Unaccounted",
+    "submitButton": "VALIDATE INDEX",
+    "reconcileButton": "RECONCILE RESERVE",
+    "globalMeterNotice": "Warning: Only update this value after recording all sub-meter readings for the period. This calculates common area consumption and losses.",
+    "error": {
+      "invalidValue": "New index cannot be lower than the previous one.",
+      "generic": "An unexpected error occurred."
+    }
+  },
+  "dataManagementPage": {
+    "exportTitle": "Export My Data",
+    "exportDescription": "Create a full backup of all your meters and readings in a JSON file. Keep this file safe.",
+    "exportButton": "Download Backup",
+    "importButton": "Import Backup",
+    "importTitle": "Import a Backup",
+    "importDescription": "Restore your data from a JSON backup file. Warning, this will overwrite current data.",
+    "importingButton": "Importing...",
+    "dangerZoneTitle": "Danger Zone",
+    "dangerZoneDescription": "A factory reset will erase all application data to start from scratch. This action is final and irreversible.",
+    "factoryResetButton": "Factory Reset",
+    "resetModalTitle": "Factory Reset",
+    "resetModalMessage": "All your data (meters, readings, recharges) will be permanently erased. This action is irreversible.",
+    "resetModalConfirmButton": "Confirm and erase all",
+    "toast": {
+      "exportSuccess": "Export successful!",
+      "exportError": "Error exporting data.",
+      "importSuccess": "Import successful!",
+      "importError": "Import error: {{error}}",
+      "invalidFile": "Invalid file format.",
+      "resetSuccess": "Application reset. Reloading...",
+      "resetError": "Error during reset."
+    }
+  },
+  "meterSettingsPage": {
+    "loading": "Loading...",
+    "pageTitle": "Meter Details",
+    "meterLabel": "Meter label",
+    "tenantNameLabel": "Tenant name (optional)",
+    "moduleNumberLabel": "Module # (identifier)",
+    "saveButton": "Save",
+    "dangerZoneTitle": "Danger Zone",
+    "dangerZoneDescription": "Deleting a meter is an irreversible action. All associated reading and recharge data will be permanently lost.",
+    "deleteButton": "Delete",
+    "deleteModal": {
+      "title": "Delete \"{{meterName}}\" ?",
+      "message": "This action is irreversible. All associated data (readings, recharges) will be permanently lost.",
+      "confirmButton": "Confirm deletion",
+      "confirmWord": "DELETE"
+    },
+    "toast": {
+      "updateSuccess": "Meter information has been updated.",
+      "updateError": "Could not update meter.",
+      "deleteSuccess": "The meter and all its data have been deleted.",
+      "deleteError": "Could not delete meter."
+    }
+  },
+  "notificationsPage": {
+    "title": "Notification Center",
+    "noNotifications": "No new notifications at the moment. Low balance or critical alerts will appear here automatically."
+  }
+}

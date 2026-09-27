@@ -1,0 +1,272 @@
+{
+  "navigation": {
+    "home": "Nyumbani",
+    "history": "Historia",
+    "diagnostics": "Uchunguzi",
+    "settings": "Mipangilio"
+  },
+  "topAppBar": {
+    "importExport": "Ingiza/Hamisha",
+    "about": "Kuhusu"
+  },
+  "dashboard": {
+    "noGlobalMeter": "Hakuna mita kuu iliyosanidiwa.",
+    "configureGlobalMeter": "Sanidi Mita Kuu",
+    "subMeters": "Mita ndogo",
+    "active": "{{count}} inatumika",
+    "active_plural": "{{count}} zinatumika",
+    "all": "Zote",
+    "addSubMeter": "Ongeza mita ndogo",
+    "lossesAndCommon": "Hasara na Maeneo ya Pamoja",
+    "compliant": "Inakubaliana"
+  },
+  "meterCard": {
+    "balanceOK": "Salio Liko Sawa",
+    "lowThreshold": "Kiwango cha Chini",
+    "inDeficit": "Nakisi",
+    "record": "Rekodi",
+    "recharge": "Ongeza Salio",
+    "general": "Jumla",
+    "globalMeter": "Mita Kuu",
+    "cumulativeIndex": "Kielezo Mkusanyiko",
+    "monthConsumption": "Matumizi ya Mwezi",
+    "activePower": "Nguvu Inayotumika",
+    "balance": "Salio",
+    "globalReserve": "Hifadhi Kuu",
+    "totalReading": "Kielezo cha Sasa"
+  },
+  "meter": {
+    "globalDefaultName": "Mita Kuu",
+    "subMeterDefaultName": "Mita Ndogo"
+  },
+  "history": {
+    "title": "Historia ya {{meterName}}",
+    "allEvents": "Historia ya Jumla",
+    "noEvents": "Hakuna matukio kwa mita hii bado.",
+    "readingLabel": "Somo",
+    "topupLabel": "Nyongeza",
+    "reconciliationLabel": "Upatanisho",
+    "readingDeleted": "Somo limefutwa.",
+    "topupDeleted": "Nyongeza imefutwa.",
+    "confirmDeleteLast": "Una uhakika unataka kutengua operesheni hii ya mwisho?",
+    "ofMeter": "ya {{meter}}",
+    "unknown": "Haijulikani",
+    "filter": {
+      "all": "Chuja kwa mita..."
+    },
+    "chart": {
+        "balance": "Mwenendo wa Salio"
+    },
+    "prediction": {
+        "dailyAvg": "Matumizi ya Wastani ya Kila Siku",
+        "estimatedRemaining": "Muda Uliobakia (Makadirio)"
+    }
+  },
+  "diagnostics": {
+    "loading": "Inachambua mtandao...",
+    "activeDiagnostic": "UCHUNGUZI UNAOENDELEA",
+    "globalConsumption": "Matumizi ya Jumla (Mita Kuu):",
+    "subMetersConsumption": "Jumla ya Matumizi ya Mita Ndogo:",
+    "lossesAndCommon": "Hasara / Maeneo ya Pamoja:",
+    "visualDistribution": "Mgawanyo wa Kuona (% ya matumizi ya jumla)",
+    "subMeters": "Mita Ndogo ({{percentage}}%)",
+    "losses": "Hasara ({{percentage}}%)",
+    "comingSoon": "Ukurasa huu utaboreshwa na grafu na historia ya uchunguzi.",
+    "status": {
+        "criticalError": "Hitilafu Muhimu ya Upimaji",
+        "leakOrFraud": "Tahadhari ya Uvujaji/Ulaghai",
+        "highLosses": "Hasara Kubwa / Maeneo ya Pamoja",
+        "balanced": "Mtandao Uliosawazishwa"
+    },
+    "financialBalance": "MIZANIA YA KIFEDHA KWA UJUMLA",
+    "totalConsumed": "Jumla ya Matumizi ya Wapangaji:",
+    "totalPaid": "Jumla Iliyolipwa na Wapangaji:",
+    "tenantDebt": "Deni la Pamoja la Wapangaji:",
+    "tenantAdvance": "Malipo ya Ziada ya Wapangaji:",
+    "paid": "Iliyolipwa",
+    "consumed": "Iliyotumika",
+    "chart": {
+        "consumed": "Matumizi Mkusanyiko",
+        "paid": "Malipo Mkusanyiko"
+    },
+    "financialHistory": "Historia ya Kifedha (siku 90 zilizopita)"
+  },
+  "financialStatus": {
+      "significantDebt": "Deni Kubwa",
+      "slightDebt": "Deni Kidogo",
+      "inAdvance": "Amelipa Ziada",
+      "balanced": "Sawa"
+  },
+  "settings": {
+    "language": {
+      "title": "Lugha"
+    },
+    "displayMode": "Hali ya Kuonyesha",
+    "light": "Mwangaza",
+    "dark": "Giza",
+    "system": "Mfumo",
+    "accentTheme": {
+      "title": "Mandhari ya Lafudhi"
+    },
+    "dialStyle": "Mtindo wa Piga",
+    "dialStyles": {
+      "realistic": "3D Halisi",
+      "flat": "Bapa la Kisasa"
+    },
+    "font": "Fonti ya Kuonyesha",
+    "fonts": {
+      "digital": "Dijitali",
+      "mono": "Mono",
+      "sans": "Sans"
+    },
+    "preview": {
+      "title": "Hakiki",
+      "label": "Hakiki ya Mita",
+      "tenantName": "Mpangaji wa Mfano"
+    }
+  },
+  "addMeterModal": {
+    "title": {
+      "global": "Sanidi Mita Kuu",
+      "sub": "Ongeza Mita Ndogo"
+    },
+    "label": {
+      "nameOptional": "Lebo / Jina (Hiari)",
+      "moduleNumber": "Nambari ya Moduli",
+      "currentIndex": "Kielezo cha Matumizi ya Sasa",
+      "paidIndex": "Kielezo Kilicholipwa na Mpangaji",
+      "initialReserve": "Hifadhi ya Awali ya Vitengo (kWh)"
+    },
+    "save": "Hifadhi",
+    "error": {
+      "moduleNumberExists": "Nambari hii ya moduli tayari ipo.",
+      "indexNegative": "Vielelezo haviwezi kuwa hasi.",
+      "paidIndexLower": "Kielelezo kilicholipwa lazima kiwe kikubwa kuliko au sawa na kielelezo cha sasa.",
+      "reserveNegative": "Hifadhi ya awali haiwezi kuwa hasi.",
+      "creationError": "Hitilafu wakati wa kuunda mita."
+    }
+  },
+  "confirmModal": {
+    "instruction": "Ili kuthibitisha, tafadhali andika \"{{confirmWord}}\" hapa chini."
+  },
+  "undoToast": {
+    "cancel": "Batilisha"
+  },
+  "themes": {
+    "industrial": "Kiwanda",
+    "neon": "Neon",
+    "retro": "Retro",
+    "lab": "Maabara",
+    "contrast": "Tofauti ya Juu"
+  },
+  "subPage": {
+    "history": "Historia ya Mita",
+    "meterSettings": "Mipangilio ya Mita",
+    "newReading": "Somo Jipya",
+    "notifications": "Arifa",
+    "dataManagement": "Ingiza / Hamisha",
+    "about": "Kuhusu"
+  },
+  "manufacturerBadge": {
+    "author": "Ir Adonis Rwabira",
+    "location": "Imeundwa kwa fahari Goma, DRC",
+    "copyright": "© {{year}} Ir Adonis Rwabira. Haki zote zimehifadhiwa."
+  },
+  "aboutPage": {
+    "title": "Kuhusu Meter Master Pro",
+    "version": "Toleo 1.0.0",
+    "copyright": "© {{year}} Ir Adonis Rwabira. Haki zote zimehifadhiwa.",
+    "author": "Imeundwa na kuendelezwa na Ir Adonis Rwabira",
+    "contact": "Mawasiliano",
+    "description": "Meter Master Pro ni App ya Wavuti inayoendelea (PWA) iliyoundwa kwa ajili ya usimamizi wa nishati wa kugawa na kugundua hasara. Inafanya kazi 100% nje ya mtandao na inahakikisha faragha ya data yako."
+  },
+  "units": {
+    "kw": "kW",
+    "kwh": "kWh",
+    "infinite": "∞",
+    "days": "siku"
+  },
+   "rechargePage": {
+    "loading": "Inapakia...",
+    "errorGeneric": "Hitilafu imetokea.",
+    "titleGlobal": "Ongeza Hifadhi Kuu",
+    "titleSubMeter": "Gawa Salio",
+    "currentReserve": "Hifadhi ya Sasa",
+    "currentBalance": "Salio la Sasa",
+    "buttonGlobal": "Ongeza Hifadhi",
+    "buttonSubMeter": "Gawa Salio",
+    "globalToastSuccess": "Hifadhi imeongezwa kwa {{amount}} {{unit}}",
+    "subMeterToastSuccess": "{{amount}} {{unit}} zimetengwa",
+    "undoToast": "Shughuli imefutwa."
+  },
+  "readingPage": {
+    "loading": "Inapakia...",
+    "currentIndex": "Kielezo cha Sasa",
+    "currentReserve": "Hifadhi ya Sasa",
+    "balance": "Salio",
+    "newBalance": "Salio Jipya",
+    "newReserve": "Hifadhi Mpya",
+    "actualReserveUnit": "kWh",
+    "lastReading": "Somo la mwisho: {{value}} {{unit}}",
+    "consumption": "Matumizi",
+    "unaccountedConsumption": "Isiyojulikana",
+    "submitButton": "THIBITISHA KIELEZO",
+    "reconcileButton": "SAWAZISHA HIFADHI",
+    "globalMeterNotice": "Onyo: Sasisha thamani hii tu baada ya kurekodi masomo yote ya mita ndogo kwa kipindi hicho. Hii inakokotoa matumizi ya maeneo ya kawaida na hasara.",
+    "error": {
+      "invalidValue": "Kielezo kipya hakiwezi kuwa chini ya cha awali.",
+      "generic": "Hitilafu isiyotarajiwa imetokea."
+    }
+  },
+  "dataManagementPage": {
+    "exportTitle": "Hamisha Data Yangu",
+    "exportDescription": "Unda nakala kamili ya mita na masomo yako yote katika faili ya JSON. Weka faili hii salama.",
+    "exportButton": "Pakua Nakala",
+    "importButton": "Ingiza Nakala",
+    "importTitle": "Ingiza Nakala",
+    "importDescription": "Rejesha data yako kutoka kwa faili ya nakala ya JSON. Onyo, hii itachukua nafasi ya data ya sSasa.",
+    "importingButton": "Inaingiza...",
+    "dangerZoneTitle": "Eneo la Hatari",
+    "dangerZoneDescription": "Kuweka upya kiwandani kutafuta data yote ya programu ili kuanza upya. Kitendo hiki ni cha mwisho na hakiwezi kubadilishwa.",
+    "factoryResetButton": "Weka Upya Kiwandani",
+    "resetModalTitle": "Weka Upya Kiwandani",
+    "resetModalMessage": "Data yako yote (mita, masomo, nyongeza) itafutwa kabisa. Kitendo hiki hakiwezi kubadilishwa.",
+    "resetModalConfirmButton": "Thibitisha na ufute yote",
+    "toast": {
+      "exportSuccess": "Hamisha imefanikiwa!",
+      "exportError": "Hitilafu wakati wa kuhamisha data.",
+      "importSuccess": "Ingiza imefanikiwa!",
+      "importError": "Hitilafu ya kuingiza: {{error}}",
+      "invalidFile": "Umbizo la faili si sahihi.",
+      "resetSuccess": "Programu imewekwa upya. Inapakia upya...",
+      "resetError": "Hitilafu wakati wa kuweka upya."
+    }
+  },
+  "meterSettingsPage": {
+    "loading": "Inapakia...",
+    "pageTitle": "Maelezo ya Mita",
+    "meterLabel": "Lebo ya mita",
+    "tenantNameLabel": "Jina la mpangaji (hiari)",
+    "moduleNumberLabel": "Nambari ya moduli (kitambulisho)",
+    "saveButton": "Hifadhi",
+    "dangerZoneTitle": "Eneo la Hatari",
+    "dangerZoneDescription": "Kufuta mita ni kitendo kisichoweza kubadilishwa. Data yote inayohusiana ya masomo na nyongeza itapotea kabisa.",
+    "deleteButton": "Futa",
+    "deleteModal": {
+      "title": "Futa \"{{meterName}}\" ?",
+      "message": "Kitendo hiki hakiwezi kubadilishwa. Data yote inayohusiana (masomo, nyongeza) itapotea kabisa.",
+      "confirmButton": "Thibitisha kufuta",
+      "confirmWord": "FUTA"
+    },
+    "toast": {
+      "updateSuccess": "Maelezo ya mita yamesasishwa.",
+      "updateError": "Haikuweza kusasisha mita.",
+      "deleteSuccess": "Mita na data yake yote vimefutwa.",
+      "deleteError": "Haikuweza kufuta mita."
+    }
+  },
+  "notificationsPage": {
+    "title": "Kituo cha Arifa",
+    "noNotifications": "Hakuna arifa mpya kwa sasa. Tahadhari za salio la chini au muhimu zitaonekana hapa kiotomatiki."
+  }
+}
