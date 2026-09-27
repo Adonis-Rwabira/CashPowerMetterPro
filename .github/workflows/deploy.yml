@@ -1,39 +1,67 @@
-name: Deploy to GitHub Pages
+name: Déploiement GitHub Pages & Firebase Hosting
 
 on:
   push:
     branches:
       - main
 
-# Allow this job to clone the repo and create a page deployment
+# Permissions requises pour GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Évite les déploiements concurrents simultanés
+concurrency:
+  group: 'deploy-all'
+  cancel-in-progress: true
+
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment-pages.outputs.page_url }}
+
     steps:
-      - name: Checkout your repository
+      # 1. Récupération du code
+      - name: Checkout du code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      # 2. Configuration de Node.js et Build
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 24
+          cache: 'npm'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Installation et Build
+        run: |
+          npm ci --legacy-peer-deps
+          npm run build
 
-      - name: Build the project
-        run: npm run build
+      # ---------------------------------------------
+      # DÉPLOIEMENT GITHUB PAGES
+      # ---------------------------------------------
+      - name: Configuration GitHub Pages
+        uses: actions/configure-pages@v5
 
-      - name: Upload production build
+      - name: Upload de l'artefact pour GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: './dist'
 
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - name: Déploiement sur GitHub Pages
+        id: deployment-pages
         uses: actions/deploy-pages@v4
+
+      # ---------------------------------------------
+      # DÉPLOIEMENT FIREBASE HOSTING
+      # ---------------------------------------------
+      - name: Déploiement sur Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CASHPOWERMETTERPRO }}'
+          channelId: live
+          projectId: cashpowermetterpro

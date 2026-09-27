@@ -1,5 +1,7 @@
 {
-  "projects": {"default": "cashpowermetterpro"},
+  "projects": {
+    "default": "cashpowermetterpro"
+  },
   "targets": {},
   "etags": {}
 }
