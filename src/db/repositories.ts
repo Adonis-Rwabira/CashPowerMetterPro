@@ -15,6 +15,10 @@ export const getMeterById = async (id: string): Promise<MeterEntity | undefined>
   return await db.meters.get(id);
 };
 
+export const getGlobalMeter = async (): Promise<MeterEntity | undefined> => {
+  return await db.meters.where({ type: 'GLOBAL' }).first();
+};
+
 export const getReadingsForMeter = async (meterId: string): Promise<ReadingEntity[]> => {
     return await db.readings.where({ meter_id: meterId }).sortBy('recorded_at');
 }

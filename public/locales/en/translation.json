@@ -37,7 +37,8 @@
   },
   "meter": {
     "globalDefaultName": "Global Meter",
-    "subMeterDefaultName": "Sub-Meter"
+    "subMeterDefaultName": "Sub-Meter",
+    "defaultOwner": "Landlord"
   },
   "history": {
     "title": "{{meterName}}'s History",
@@ -59,7 +60,14 @@
     },
     "prediction": {
         "dailyAvg": "Avg. Daily Consumption",
-        "estimatedRemaining": "Estimated Remaining Time"
+        "estimatedRemaining": "Estimated Remaining Time",
+        "totalDailyAvg": "Total Daily Average",
+        "unaccountedConsumption": "Unaccounted Consumption"
+    },
+    "meterNotFound": {
+      "title": "Meter Not Found",
+      "message": "The requested meter could not be found. It might have been deleted or the link is incorrect.",
+      "button": "Go to Global History"
     }
   },
   "diagnostics": {
@@ -210,7 +218,6 @@
     "actualReserveUnit": "kWh",
     "lastReading": "Last reading: {{value}} {{unit}}",
     "consumption": "Consumption",
-    "unaccountedConsumption": "Unaccounted",
     "submitButton": "VALIDATE INDEX",
     "reconcileButton": "RECONCILE RESERVE",
     "globalMeterNotice": "Warning: Only update this value after recording all sub-meter readings for the period. This calculates common area consumption and losses.",

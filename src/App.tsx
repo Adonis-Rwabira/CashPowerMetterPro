@@ -2,9 +2,11 @@ import React, { useEffect } from 'react';
 import { Toaster, toast } from 'react-hot-toast';
 import { Bell } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import AppRouter from './AppRouter';
 import { db } from './db/database';
+import { getGlobalMeter, createMeter } from './db/repositories';
 
 const NotificationToast = ({ count, onDismiss }: { count: number, onDismiss: () => void }) => {
   const navigate = useNavigate();
@@ -60,6 +62,44 @@ const AppStartupNotification: React.FC = () => {
     return null;
 }
 
+const EnsureGlobalMeterExists: React.FC = () => {
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    const checkAndCreateGlobalMeter = async () => {
+      try {
+        const existingGlobalMeter = await getGlobalMeter();
+        if (!existingGlobalMeter) {
+          console.log("No global meter found. Creating a default one.");
+          await createMeter({
+            type: 'GLOBAL',
+            label: t('meter.defaultOwner'),
+            module_number: 'GLOBAL',
+            initial_index: 0,
+            current_cached_index: 0,
+            current_cached_balance: 0,
+            unit_type: 'kWh',
+            status: 'ACTIVE',
+            theme_color: '#FFB300',
+          });
+          console.log("Default global meter created successfully.");
+        } else {
+          console.log("Global meter already exists.");
+        }
+      } catch (error) {
+        console.error("Error checking or creating global meter:", error);
+        toast.error("Failed to initialize the main meter.");
+      }
+    };
+
+    const timer = setTimeout(checkAndCreateGlobalMeter, 50);
+    
+    return () => clearTimeout(timer);
+  }, [t]);
+
+  return null;
+};
+
 function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -72,6 +112,7 @@ function App() {
   return (
     <>
         <Toaster />
+        <EnsureGlobalMeterExists />
         <AppStartupNotification />
         <AppRouter />
     </>

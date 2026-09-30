@@ -37,7 +37,8 @@
   },
   "meter": {
     "globalDefaultName": "Mita Kuu",
-    "subMeterDefaultName": "Mita Ndogo"
+    "subMeterDefaultName": "Mita Ndogo",
+    "defaultOwner": "Mmiliki wa nyumba"
   },
   "history": {
     "title": "Historia ya {{meterName}}",
@@ -59,7 +60,14 @@
     },
     "prediction": {
         "dailyAvg": "Matumizi ya Wastani ya Kila Siku",
-        "estimatedRemaining": "Muda Uliobakia (Makadirio)"
+        "estimatedRemaining": "Muda Uliobakia (Makadirio)",
+        "totalDailyAvg": "Jumla ya Matumizi ya Wastani ya Kila Siku",
+        "unaccountedConsumption": "Matumizi yasiyojulikana"
+    },
+    "meterNotFound": {
+      "title": "Mita haipatikani",
+      "message": "Mita uliyoomba haipatikani. Inaweza kuwa imefutwa au kiungo si sahihi.",
+      "button": "Nenda kwenye Historia ya Jumla"
     }
   },
   "diagnostics": {
@@ -209,7 +217,6 @@
     "actualReserveUnit": "kWh",
     "lastReading": "Somo la mwisho: {{value}} {{unit}}",
     "consumption": "Matumizi",
-    "unaccountedConsumption": "Isiyojulikana",
     "submitButton": "THIBITISHA KIELEZO",
     "reconcileButton": "SAWAZISHA HIFADHI",
     "globalMeterNotice": "Onyo: Sasisha thamani hii tu baada ya kurekodi masomo yote ya mita ndogo kwa kipindi hicho. Hii inakokotoa matumizi ya maeneo ya kawaida na hasara.",

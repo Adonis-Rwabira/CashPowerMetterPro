@@ -12,7 +12,6 @@ const SettingsPage = () => {
     id: 'preview-sub-meter',
     type: 'SUB_METER',
     label: t('settings.preview.label'),
-    tenant_name: t('settings.preview.tenantName'),
     module_number: 'PREVIEW-01',
     unit_type: 'kWh',
     initial_index: 0,

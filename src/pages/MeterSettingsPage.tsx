@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import { useTranslation } from 'react-i18next';
 import { getMeterById, updateMeterDetails, deleteMeterAndAssociatedData } from '../db/repositories';
 import { MeterEntity } from '../db/database';
-import { Save, Trash2, AlertTriangle, User, Tag, Hash } from 'lucide-react';
+import { Save, Trash2, AlertTriangle, Tag, Hash } from 'lucide-react';
 import ConfirmModal from '../components/modals/ConfirmModal';
 
 const MeterSettingsPage: React.FC = () => {
@@ -22,7 +22,6 @@ const MeterSettingsPage: React.FC = () => {
     if (meter) {
       setFormData({
         label: meter.label,
-        tenant_name: meter.tenant_name,
         module_number: meter.module_number,
       });
     }
@@ -38,7 +37,6 @@ const MeterSettingsPage: React.FC = () => {
     try {
       await updateMeterDetails(meterId, {
         label: formData.label,
-        tenant_name: formData.tenant_name,
         module_number: formData.module_number,
       });
       toast.success(t('meterSettingsPage.toast.updateSuccess'));
@@ -90,17 +88,6 @@ const MeterSettingsPage: React.FC = () => {
               type="text"
               name="label"
               value={formData.label || ''}
-              onChange={handleInputChange}
-              className="bg-surface-container-high border border-outline/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-            />
-          </label>
-
-          <label className="flex flex-col gap-1">
-            <span className="text-sm font-medium text-on-surface-variant flex items-center gap-2"><User size={14}/> {t('meterSettingsPage.tenantNameLabel')}</span>
-            <input
-              type="text"
-              name="tenant_name"
-              value={formData.tenant_name || ''}
               onChange={handleInputChange}
               className="bg-surface-container-high border border-outline/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-primary outline-none"
             />

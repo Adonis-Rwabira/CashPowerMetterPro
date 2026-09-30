@@ -38,10 +38,6 @@ const AddMeterModal: React.FC<AddMeterModalProps> = ({ isOpen, onClose, meterTyp
         setError(t('addMeterModal.error.indexNegative'));
         return;
     }
-     if (meterType === 'SUB_METER' && paidIndex < currentIndex) {
-        setError(t('addMeterModal.error.paidIndexLower'));
-        return;
-    }
     if (meterType === 'GLOBAL' && initialReserve < 0) {
         setError(t('addMeterModal.error.reserveNegative'));
         return;

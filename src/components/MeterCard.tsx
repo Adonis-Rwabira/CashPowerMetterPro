@@ -55,8 +55,10 @@ const MeterCard: React.FC<MeterCardProps> = ({ meter }) => {
               {meter.unit_type === 'kWh' ? <Zap size={22} /> : <Droplet size={22} />}
             </div>
             <div className="flex flex-col min-w-0">
-              <span className="text-xs font-mono uppercase tracking-wider text-on-surface-variant truncate">{meter.module_number}</span>
-              <span className="text-sm font-semibold tracking-tight truncate leading-tight text-on-surface">{meter.label}</span>
+              <div className="flex items-baseline gap-2">
+                <span className="text-sm font-semibold tracking-tight truncate leading-tight text-on-surface">{meter.label}</span>
+                <span className="text-xs font-mono uppercase tracking-wider text-on-surface-variant truncate">{meter.module_number ? ` • ${meter.module_number}` : ''}</span>
+              </div>
               <div className={`mt-1 flex items-center gap-1.5 text-xs font-medium ${statusInfo.color}`}>
                 {statusInfo.icon}
                 <span>{statusInfo.text}</span>

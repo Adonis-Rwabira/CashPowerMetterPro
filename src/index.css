@@ -2,15 +2,17 @@
 
 @theme {
   /* THÈME DE BASE (LIGHT) */
-  --color-background: #F0F2F5;
-  --color-surface: #FFFFFF;
+  --color-background: #F0F2F5; /* Fond de page légèrement grisé */
+  --color-surface: #FFFFFF; /* Surface principale des cartes, bien blanche */
   --color-surface-dim: #E8EAEF;
   --color-surface-bright: #FFFFFF;
-  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-container-lowest: #111827; /* FOND SOMBRE POUR L'ÉCRAN LCD */
   --color-surface-container-low: #F8F9FA;
-  --color-surface-container: #FFFFFF;
-  --color-surface-container-high: #F8F9FA;
-  --color-surface-container-highest: #E8EAEF;
+  --color-surface-container: #F0F2F5; /* Fond pour boutons secondaires */
+  --color-surface-container-high: #E8EAEF;
+  --color-surface-container-highest: #DDE1E6;
+  --color-inverse-surface: #18212F;
+  --color-inverse-on-surface: #FFFFFF;
 
   --color-primary: #047857;
   --color-primary-container: #D1FAE5;
@@ -18,12 +20,13 @@
   --color-secondary-container: #FDE68A;
   --color-tertiary: #374151;
   --color-tertiary-container: #D1D5DB;
+  --color-warning: #B45309;
   --color-error: #B91C1C;
   --color-error-container: #FEE2E2;
 
   --color-on-background: #111827;
-  --color-on-surface: #18212F; /* Texte principal un peu plus sombre */
-  --color-on-surface-variant: #4A5568; /* Texte secondaire BEAUCOUP plus lisible */
+  --color-on-surface: #18212F;
+  --color-on-surface-variant: #4A5568;
   --color-on-primary: #FFFFFF;
   --color-on-primary-container: #064E3B;
   --color-on-secondary: #FFFFFF;
@@ -33,11 +36,8 @@
   --color-on-error: #FFFFFF;
   --color-on-error-container: #991B1B;
 
-  --color-outline: #DEE2E6; /* Bordure un peu plus visible */
-  --color-outline-variant: #CBD5E0; /* Bordure variante plus visible */
-
-  --font-sans: "Geist", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --color-outline: #DDE1E6; /* Bordure légèrement plus visible */
+  --color-outline-variant: #CBD5E0;
 }
 
 .dark {
@@ -50,6 +50,8 @@
   --color-surface-container: #1d2026;
   --color-surface-container-high: #262930;
   --color-surface-container-highest: #333538;
+  --color-inverse-surface: #f3f4f6;
+  --color-inverse-on-surface: #16181d;
   
   --color-primary: #4edea3;
   --color-primary-container: #10b981;
@@ -57,6 +59,7 @@
   --color-secondary-container: #ee9800;
   --color-tertiary: #f59e0b;
   --color-tertiary-container: #ff7a73;
+  --color-warning: #ffb95f;
   --color-error: #ffb4ab;
   --color-error-container: #93000a;
   
@@ -82,80 +85,162 @@
 
 /* 🎨 ACCENT: INDUSTRIAL */
 body.accent-industrial {
-  --color-primary: #047857; --color-on-primary: #FFFFFF;
-  --color-primary-container: #D1FAE5; --color-on-primary-container: #064E3B;
-  --color-secondary: #B45309; --color-on-secondary: #FFFFFF;
-  --color-secondary-container: #FDE68A; --color-on-secondary-container: #78350F;
-  --color-error: #B91C1C; --color-on-error: #FFFFFF;
-  --color-error-container: #FEE2E2; --color-on-error-container: #991B1B;
+  --color-primary: #047857;
+  --color-on-primary: #FFFFFF;
+  --color-primary-container: #D1FAE5;
+  --color-on-primary-container: #064E3B;
+  --color-secondary: #B45309;
+  --color-on-secondary: #FFFFFF;
+  --color-secondary-container: #FDE68A;
+  --color-on-secondary-container: #78350F;
+  --color-warning: #B45309;
+  --color-error: #B91C1C;
+  --color-on-error: #FFFFFF;
+  --color-error-container: #FEE2E2;
+  --color-on-error-container: #991B1B;
 }
 .dark.accent-industrial {
-  --color-primary: #4edea3; --color-on-primary: #003824;
-  --color-primary-container: #10b981; --color-on-primary-container: #00422b;
-  --color-secondary: #ffb95f; --color-on-secondary: #472a00;
-  --color-secondary-container: #ee9800; --color-on-secondary-container: #5b3800;
-  --color-error: #ffb4ab; --color-on-error: #690005;
-  --color-error-container: #93000a; --color-on-error-container: #ffdad6;
+  --color-primary: #4edea3;
+  --color-on-primary: #003824;
+  --color-primary-container: #10b981;
+  --color-on-primary-container: #00422b;
+  --color-secondary: #ffb95f;
+  --color-on-secondary: #472a00;
+  --color-secondary-container: #ee9800;
+  --color-on-secondary-container: #5b3800;
+  --color-warning: #ffb95f;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
 }
 
 /* 🎨 ACCENT: NEON */
 body.accent-neon {
-  --color-primary: #00E5FF; --color-on-primary: #001F25;
-  --color-primary-container: #004F58; --color-on-primary-container: #97F0FF;
-  --color-secondary: #FA2771; --color-on-secondary: #FFFFFF;
-  --color-secondary-container: #830029; --color-on-secondary-container: #FFD9DD;
-  --color-error: #FF5555; --color-on-error: #FFFFFF;
+  --color-primary: #00E5FF;
+  --color-on-primary: #001F25;
+  --color-primary-container: #004F58;
+  --color-on-primary-container: #97F0FF;
+  --color-secondary: #FA2771;
+  --color-on-secondary: #FFFFFF;
+  --color-secondary-container: #830029;
+  --color-on-secondary-container: #FFD9DD;
+  --color-warning: #FA2771;
+  --color-error: #FF5555;
+  --color-on-error: #FFFFFF;
+  --color-error-container: #FEE2E2;
+  --color-on-error-container: #991B1B;
 }
 .dark.accent-neon {
-  --color-primary: #00E5FF; --color-on-primary: #001F25;
-  --color-primary-container: #004F58; --color-on-primary-container: #97F0FF;
-  --color-secondary: #FA2771; --color-on-secondary: #FFFFFF;
-  --color-secondary-container: #830029; --color-on-secondary-container: #FFD9DD;
-  --color-error: #ffb4ab; --color-on-error: #690005;
+  --color-primary: #00E5FF;
+  --color-on-primary: #001F25;
+  --color-primary-container: #004F58;
+  --color-on-primary-container: #97F0FF;
+  --color-secondary: #FA2771;
+  --color-on-secondary: #FFFFFF;
+  --color-secondary-container: #830029;
+  --color-on-secondary-container: #FFD9DD;
+  --color-warning: #FA2771;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
 }
 
 /* 🎨 ACCENT: RETRO */
 body.accent-retro {
-  --color-primary: #D97706; --color-on-primary: #FFFFFF;
-  --color-primary-container: #FBBF24; --color-on-primary-container: #78350F;
-  --color-secondary: #047857; --color-on-secondary: #FFFFFF;
-  --color-secondary-container: #A7F3D0; --color-on-secondary-container: #064E3B;
-  --color-error: #B91C1C; --color-on-error: #FFFFFF;
+  --color-primary: #D97706;
+  --color-on-primary: #FFFFFF;
+  --color-primary-container: #FBBF24;
+  --color-on-primary-container: #78350F;
+  --color-secondary: #047857;
+  --color-on-secondary: #FFFFFF;
+  --color-secondary-container: #A7F3D0;
+  --color-on-secondary-container: #064E3B;
+  --color-warning: #047857;
+  --color-error: #B91C1C;
+  --color-on-error: #FFFFFF;
+  --color-error-container: #FEE2E2;
+  --color-on-error-container: #991B1B;
 }
 .dark.accent-retro {
-  --color-primary: #FBBF24; --color-on-primary: #422000;
-  --color-primary-container: #D97706; --color-on-primary-container: #FDE68A;
-  --color-secondary: #6EE7B7; --color-on-secondary: #003824;
-  --color-secondary-container: #047857; --color-on-secondary-container: #A7F3D0;
-  --color-error: #ffb4ab; --color-on-error: #690005;
+  --color-primary: #FBBF24;
+  --color-on-primary: #422000;
+  --color-primary-container: #D97706;
+  --color-on-primary-container: #FDE68A;
+  --color-secondary: #6EE7B7;
+  --color-on-secondary: #003824;
+  --color-secondary-container: #047857;
+  --color-on-secondary-container: #A7F3D0;
+  --color-warning: #6EE7B7;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
 }
 
 /* 🎨 ACCENT: LAB */
 body.accent-lab {
-  --color-primary: #2563EB; --color-on-primary: #FFFFFF;
-  --color-primary-container: #DBEAFE; --color-on-primary-container: #1E40AF;
-  --color-secondary: #9333EA; --color-on-secondary: #FFFFFF;
-  --color-secondary-container: #F3E8FF; --color-on-secondary-container: #6B21A8;
+  --color-primary: #2563EB;
+  --color-on-primary: #FFFFFF;
+  --color-primary-container: #DBEAFE;
+  --color-on-primary-container: #1E40AF;
+  --color-secondary: #9333EA;
+  --color-on-secondary: #FFFFFF;
+  --color-secondary-container: #F3E8FF;
+  --color-on-secondary-container: #6B21A8;
+  --color-warning: #9333EA;
+  --color-error: #B91C1C;
+  --color-on-error: #FFFFFF;
+  --color-error-container: #FEE2E2;
+  --color-on-error-container: #991B1B;
 }
 .dark.accent-lab {
-  --color-primary: #60A5FA; --color-on-primary: #002B75;
-  --color-primary-container: #1E40AF; --color-on-primary-container: #DBEAFE;
-  --color-secondary: #C084FC; --color-on-secondary: #4A0080;
-  --color-secondary-container: #6B21A8; --color-on-secondary-container: #F3E8FF;
+  --color-primary: #60A5FA;
+  --color-on-primary: #002B75;
+  --color-primary-container: #1E40AF;
+  --color-on-primary-container: #DBEAFE;
+  --color-secondary: #C084FC;
+  --color-on-secondary: #4A0080;
+  --color-secondary-container: #6B21A8;
+  --color-on-secondary-container: #F3E8FF;
+  --color-warning: #C084FC;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
 }
 
 /* 🎨 ACCENT: CONTRAST */
 body.accent-contrast {
-  --color-primary: #000000; --color-on-primary: #FFFF00;
-  --color-primary-container: #FFFF00; --color-on-primary-container: #000000;
-  --color-secondary: #000000; --color-on-secondary: #FFFF00;
-  --color-secondary-container: #FFFF00; --color-on-secondary-container: #000000;
+  --color-primary: #000000;
+  --color-on-primary: #FFFF00;
+  --color-primary-container: #FFFF00;
+  --color-on-primary-container: #000000;
+  --color-secondary: #000000;
+  --color-on-secondary: #FFFF00;
+  --color-secondary-container: #FFFF00;
+  --color-on-secondary-container: #000000;
+  --color-warning: #000000;
+  --color-error: #B91C1C;
+  --color-on-error: #FFFFFF;
+  --color-error-container: #FEE2E2;
+  --color-on-error-container: #991B1B;
 }
 .dark.accent-contrast {
-  --color-primary: #FFFF00; --color-on-primary: #000000;
-  --color-primary-container: #000000; --color-on-primary-container: #FFFF00;
-  --color-secondary: #FFFF00; --color-on-secondary: #000000;
-  --color-secondary-container: #000000; --color-on-secondary-container: #FFFF00;
+  --color-primary: #FFFF00;
+  --color-on-primary: #000000;
+  --color-primary-container: #000000;
+  --color-on-primary-container: #FFFF00;
+  --color-secondary: #FFFF00;
+  --color-on-secondary: #000000;
+  --color-secondary-container: #000000;
+  --color-on-secondary-container: #FFFF00;
+  --color-warning: #FFFF00;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
 }
 
 
